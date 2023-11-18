@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
     <link rel="stylesheet" href="products.css">
+    <title>Home</title>
+
 
 </head>
 <body>
@@ -23,10 +24,9 @@
         </div>
     </div>
     <?php
-
     include("db_conn.php");
     echo '<div class="products">';
-    $sql = "SELECT id, nom, nom_category,img, prix_unitaire, qantity, qantity_min,libelle FROM produit";
+    $sql = "SELECT id, nom, nom_category,img, prix_unitaire, qantity, qantity_min,libelle FROM produit where qantity<qantity_min";
     $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     

@@ -11,5 +11,5 @@ $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 if (!$conn) {
 	echo "<script>alert('login is valid');</script>";
 }
-echo"connection is sucessful";
+echo"";
 ?>
